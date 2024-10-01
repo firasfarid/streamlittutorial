@@ -82,7 +82,7 @@ st.divider()
 prompt = st.text_area("Enter your story idea here")
 
 if st.button(label="Generate Storybook"):
-  
+  with st.spinner('Generating Storybook...'):
   story = story_gen(prompt)
   cover = cover_gen(story)
   image = image_gen(cover)
